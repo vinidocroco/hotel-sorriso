@@ -1,0 +1,110 @@
+/* Fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(90deg, #0051ff, #00b4d8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Seções */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #0051ff;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+form input, form button {
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form button {
+    background: #0051ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #003bb5;
+}
+
+/* Rodapé */
+footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    /* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+
+}
