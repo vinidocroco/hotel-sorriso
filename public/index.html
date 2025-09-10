@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Sorriso</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800 w-full overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="bg-gray-900 text-white w-full">
+    <div class="w-full flex justify-between items-center p-4 px-8">
+      <h1 class="text-2xl font-bold">Hotel Sorriso</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+          <li><a href="#quartos" class="hover:text-yellow-400">Quartos</a></li>
+          <li><a href="#servicos" class="hover:text-yellow-400">Serviços</a></li>
+          <li><a href="#sobre" class="hover:text-yellow-400">Quem Somos</a></li>
+          <li><a href="#contato" class="hover:text-yellow-400">Contato</a></li>
+          <!-- Botões Login e Cadastro -->
+          <li><button id="btnLogin" class="bg-yellow-400 text-gray-900 font-bold py-1 px-4 rounded hover:bg-yellow-500 transition">Login</button></li>
+          <li><button id="btnRegister" class="bg-yellow-400 text-gray-900 font-bold py-1 px-4 rounded hover:bg-yellow-500 transition">Cadastrar</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative text-white w-full h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 slideshow w-full h-full">
+      <img src="imagens/faxada.jpeg.jpeg" alt="Vista do Hotel" class="slide active">
+      <img src="imagens/praça.jpeg.jpeg" alt="Vista Noturna" class="slide">
+    </div>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Bem-vindo ao Hotel Sorriso</h1>
+      <p class="text-lg md:text-xl mb-6">Conforto, elegância e atendimento de excelência para a sua estadia.</p>
+      <a href="https://wa.me/5591986099153?text=Olá,%20gostaria%20de%20fazer%20uma%20reserva%20no%20Hotel%20Sorriso" target="_blank"
+         class="bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded hover:bg-yellow-500 transition">
+         Reserve Agora
+      </a>
+    </div>
+  </section>
+
+  <!-- Quem é o Hotel Sorriso -->
+  <section id="sobre" class="py-16 w-full px-4 md:px-16 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-6">Quem é o Hotel Sorriso</h2>
+    <p class="max-w-3xl mx-auto text-lg md:text-xl">
+      O Hotel Sorriso é referência em conforto, elegância e atendimento de excelência. 
+      Estamos localizados em um ponto estratégico da cidade e oferecemos quartos modernos, serviços de alta qualidade e uma experiência memorável para nossos hóspedes.
+    </p>
+  </section>
+
+  <!-- Seção de Quartos -->
+  <section id="quartos" class="py-16 w-full px-4 md:px-16">
+    <h2 class="text-3xl font-bold mb-12 text-center">Nossos Quartos</h2>
+    <div class="grid md:grid-cols-4 gap-8 w-full">
+      <!-- Quarto Single -->
+      <div class="quarto bg-white rounded shadow hover:shadow-lg transition">
+        <div class="relative group overflow-hidden w-full h-64">
+          <img src="imagens/quarto single.jpeg" alt="Quarto Single" class="rounded-t w-full h-full object-contain transition-opacity duration-500 group-hover:opacity-0">
+          <img src="imagens/quarto single2 jpeg.jpeg" alt="Quarto Single Alternativo" class="absolute top-0 left-0 w-full h-full rounded-t object-contain opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        </div>
+        <div class="p-6">
+          <h3 class="quarto-nome text-xl font-semibold mb-2">Quarto Single</h3>
+          <p><strong>R$ 170/noite</strong></p>
+          <p class="mb-4">Cama king-size, Espaço Amplo, café da manhã incluso.</p>
+          <a href="#" class="btn-reservar bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-yellow-500 transition">Reservar</a>
+        </div>
+      </div>
+
+      <!-- Quarto Duplo -->
+      <div class="quarto bg-white rounded shadow hover:shadow-lg transition">
+        <div class="relative group overflow-hidden w-full h-64">
+          <img src="imagens/quarto duplo.jpeg.jpeg" alt="Quarto Duplo" class="rounded-t w-full h-full object-contain transition-opacity duration-500 group-hover:opacity-0">
+          <img src="imagens/quarto duplo2.jpeg.jpeg" alt="Quarto Duplo Alternativo" class="absolute top-0 left-0 w-full h-full rounded-t object-contain opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        </div>
+        <div class="p-6">
+          <h3 class="quarto-nome text-xl font-semibold mb-2">Quarto Duplo</h3>
+          <p><strong>R$ 240/noite</strong></p>
+          <p class="mb-4">Cama queen-size, ambiente aconchegante, Wi-Fi grátis.</p>
+          <a href="#" class="btn-reservar bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-yellow-500 transition">Reservar</a>
+        </div>
+      </div>
+
+      <!-- Quarto Triplo -->
+      <div class="quarto bg-white rounded shadow hover:shadow-lg transition">
+        <div class="relative group overflow-hidden w-full h-64">
+          <img src="imagens/quarto triplo2.jpeg.jpeg" alt="Quarto Triplo" class="rounded-t w-full h-full object-contain transition-opacity duration-500 group-hover:opacity-0">
+          <img src="imagens/quarto triplo.jpeg.jpeg" alt="Quarto Triplo Alternativo" class="absolute top-0 left-0 w-full h-full rounded-t object-contain opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        </div>
+        <div class="p-6">
+          <h3 class="quarto-nome text-xl font-semibold mb-2">Quarto Triplo</h3>
+          <p><strong>R$ 315/noite</strong></p>
+          <p class="mb-4">3 Camas de solteiro, sala separada, Wi-Fi, Ar-Condicionado.</p>
+          <a href="#" class="btn-reservar bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-yellow-500 transition">Reservar</a>
+        </div>
+      </div>
+
+      <!-- Quarto Family -->
+      <div class="quarto bg-white rounded shadow hover:shadow-lg transition">
+        <div class="relative group overflow-hidden w-full h-64">
+          <img src="imagens/quarto family2.jpeg.jpeg" alt="Quarto Family" class="rounded-t w-full h-full object-contain transition-opacity duration-500 group-hover:opacity-0">
+          <img src="imagens/quarto family.jpeg.jpeg" alt="Quarto Family Alternativo" class="absolute top-0 left-0 w-full h-full rounded-t object-contain opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        </div>
+        <div class="p-6">
+          <h3 class="quarto-nome text-xl font-semibold mb-2">Quarto Family</h3>
+          <p><strong>R$ 340/noite</strong></p>
+          <p class="mb-4">Camas de solteiro, sala separada, Wi-Fi, Ar-Condicionado.</p>
+          <a href="#" class="btn-reservar bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:bg-yellow-500 transition">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-16 w-full px-4 md:px-16">
+    <h2 class="text-3xl font-bold mb-12 text-center">Serviços</h2>
+    <div class="grid md:grid-cols-3 gap-8 w-full text-center">
+      <div class="p-6">
+        <div class="text-yellow-400 text-5xl mb-4">⭐</div>
+        <h3 class="text-xl font-semibold mb-2">Avaliações</h3>
+        <p>Clientes satisfeitos em todo o mundo.</p>
+      </div>
+      <div class="p-6">
+        <div class="text-yellow-400 text-5xl mb-4">⏰</div>
+        <h3 class="text-xl font-semibold mb-2">Recepção 24h</h3>
+        <p>Atendimento disponível a qualquer hora do dia.</p>
+      </div>
+      <div class="p-6">
+        <div class="text-yellow-400 text-5xl mb-4">🍽️</div>
+        <h3 class="text-xl font-semibold mb-2">Melhores Pratos</h3>
+        <p>Gastronomia deliciosa com pratos locais e internacionais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-16 bg-gray-100 w-full px-4 md:px-16">
+    <div class="md:flex md:gap-12 w-full">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-3xl font-bold mb-6">Contato</h2>
+        <form class="space-y-4 w-full">
+          <input type="text" placeholder="Nome" class="w-full p-3 rounded border border-gray-300">
+          <input type="email" placeholder="Email" class="w-full p-3 rounded border border-gray-300">
+          <textarea placeholder="Mensagem" rows="5" class="w-full p-3 rounded border border-gray-300"></textarea>
+          <button type="submit" class="bg-yellow-400 text-gray-900 font-bold py-2 px-6 rounded hover:bg-yellow-500 transition">Enviar</button>
+        </form>
+      </div>
+      <div class="md:w-1/2 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.606632843952!2d-48.489874452352524!3d-1.2924213913680949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a4642647a4f621%3A0x1446dd39149be0c8!2sHotel%20Icoaraci!5e0!3m2!1spt-BR!2sbr!4v1756164631234!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 w-full">
+    <p>&copy; 2025 Hotel Sorriso. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modais -->
+  <!-- Modal de Login -->
+  <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+      <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">✖</button>
+      <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
+      <form id="loginForm" class="space-y-4">
+        <input type="email" id="email" placeholder="Email" required class="w-full p-3 border rounded">
+        <input type="password" id="senha" placeholder="Senha" required class="w-full p-3 border rounded">
+        <button type="submit" class="w-full bg-yellow-400 text-gray-900 font-bold py-2 rounded hover:bg-yellow-500 transition">Entrar</button>
+      </form>
+      <p id="msg" class="text-center mt-2 text-red-600"></p>
+    </div>
+  </div>
+
+  <!-- Modal de Cadastro -->
+  <div id="registerModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+      <button id="closeRegisterModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">✖</button>
+      <h2 class="text-2xl font-bold mb-4 text-center">Cadastro</h2>
+      <form id="registerForm" class="space-y-4">
+        <input type="text" id="nome" placeholder="Nome" required class="w-full p-3 border rounded">
+        <input type="email" id="emailRegister" placeholder="Email" required class="w-full p-3 border rounded">
+        <input type="password" id="senhaRegister" placeholder="Senha" required class="w-full p-3 border rounded">
+        <button type="submit" class="w-full bg-yellow-400 text-gray-900 font-bold py-2 rounded hover:bg-yellow-500 transition">Cadastrar</button>
+      </form>
+      <p id="msgRegister" class="text-center mt-2 text-red-600"></p>
+      <p class="text-center mt-4">Já tem conta? <button id="openLoginFromRegister" class="text-yellow-400 font-bold">Login</button></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Slideshow Hero
+    const slides = document.querySelectorAll('.slideshow .slide');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
+
+    // Botão reservar WhatsApp
+    document.querySelectorAll('.btn-reservar').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const quarto = this.closest('.quarto').querySelector('.quarto-nome').innerText;
+        const numeroWhatsApp = '5591986099153';
+        const mensagem = encodeURIComponent(`Olá, gostaria de reservar o ${quarto} no Hotel Sorriso.`);
+        window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+      });
+    });
+
+    // Modal Login
+    const modal = document.getElementById("loginModal");
+    const btnLogin = document.getElementById("btnLogin");
+    const closeModal = document.getElementById("closeModal");
+
+    btnLogin.addEventListener("click", () => modal.classList.remove("hidden"));
+    closeModal.addEventListener("click", () => modal.classList.add("hidden"));
+
+    // Modal Cadastro
+    const registerModal = document.getElementById("registerModal");
+    const btnRegister = document.getElementById("btnRegister");
+    const closeRegisterModal = document.getElementById("closeRegisterModal");
+    const openLoginFromRegister = document.getElementById("openLoginFromRegister");
+
+    btnRegister.addEventListener("click", () => registerModal.classList.remove("hidden"));
+    closeRegisterModal.addEventListener("click", () => registerModal.classList.add("hidden"));
+    openLoginFromRegister.addEventListener("click", () => {
+      registerModal.classList.add("hidden");
+      modal.classList.remove("hidden");
+    });
+
+    // Login Fetch
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+      const msg = document.getElementById("msg");
+
+      try {
+        const res = await fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, senha })
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          window.location.href = data.redirect;
+        } else {
+          msg.textContent = data.msg;
+        }
+      } catch (err) {
+        msg.textContent = "Erro no servidor!";
+      }
+    });
+
+    // Cadastro Fetch
+    document.getElementById("registerForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("emailRegister").value;
+      const senha = document.getElementById("senhaRegister").value;
+      const msgRegister = document.getElementById("msgRegister");
+
+      try {
+        const res = await fetch("/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nome, email, senha })
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          msgRegister.textContent = "Cadastro realizado com sucesso!";
+          msgRegister.classList.remove("text-red-600");
+          msgRegister.classList.add("text-green-600");
+          setTimeout(() => {
+            registerModal.classList.add("hidden");
+            modal.classList.remove("hidden");
+          }, 1500);
+        } else {
+          msgRegister.textContent = data.msg;
+        }
+      } catch (err) {
+        msgRegister.textContent = "Erro no servidor!";
+      }
+    });
+  </script>
+</body>
+</html>

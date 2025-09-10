@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Hotel Sorriso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800 flex items-center justify-center h-screen bg-gray-100">
+
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+    <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+
+    <form id="loginForm" class="flex flex-col">
+      <input type="email" id="email" placeholder="Email" class="mb-4 p-3 border rounded">
+      <input type="password" id="senha" placeholder="Senha" class="mb-4 p-3 border rounded">
+      <button type="submit" class="bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">Entrar</button>
+    </form>
+
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, senha })
+      });
+
+      const data = await res.json();
+
+      if(data.success) {
+        window.location.href = data.redirect; // redireciona para cliente.html ou admin.html
+      } else {
+        alert(data.msg); // mostra mensagem de erro
+      }
+    });
+  </script>
+
+</body>
+</html>
+
