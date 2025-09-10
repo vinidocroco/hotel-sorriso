@@ -251,7 +251,13 @@
 
         const data = await res.json();
         if (data.success) {
-          window.location.href = data.redirect;
+          msg.textContent = "Login realizado com sucesso!";
+          msg.classList.remove("text-red-600");
+          msg.classList.add("text-green-600");
+          setTimeout(() => {
+            modal.classList.add("hidden");
+            window.location.href = "/historico.html"; // redireciona para histórico
+          }, 1000);
         } else {
           msg.textContent = data.msg;
         }
@@ -290,7 +296,11 @@
       } catch (err) {
         msgRegister.textContent = "Erro no servidor!";
       }
+    
     });
   </script>
+ 
+
 </body>
 </html>
+
